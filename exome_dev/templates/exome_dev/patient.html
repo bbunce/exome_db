@@ -1,0 +1,29 @@
+{% extends "exome_dev/base.html" %}
+
+{% block content %}
+<div>
+    <h1>Patient ({{patient.family_id}})</h1>
+</div>   
+
+<div>
+    <ul>
+        <li>Starlims ID: {{patient.starlims_id}}</li>
+        <li>Surname: {{patient.surname}}</li>
+        <li>Forename: {{patient.forename}}</li>
+        <li>DOB: {{patient.dob}}</li>
+    </ul>
+</div>  
+
+<div>
+    <h3>Contact Logs</h3>
+</div> 
+
+<!-- <div>
+    <ul>
+        <li>Starlims ID: {{patient.starlims_id}}</li>
+        <li>Surname: {{patient.surname}}</li>
+        <li>Forename: {{patient.forename}}</li>
+        <li>DOB: {{patient.dob}}</li>
+    </ul>
+</div>   -->
+{% endblock content %}

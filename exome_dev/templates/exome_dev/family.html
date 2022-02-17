@@ -1,0 +1,34 @@
+{% extends "exome_dev/base.html" %}
+{% load static %}
+
+{% block content %}
+<div>
+    <h1>Family {{family_id}}</h1>
+</div>
+
+<div>
+    <ul>
+    {% for family in families %}
+        <li><a href="family/{{family.family_id}}/">{{family.family_id}}</a></li>
+    {% endfor %} 
+    </ul>
+</div>
+
+<div>
+    {% for patient in patients %}
+    <ul>
+        <li>Starlims ID: {{patient.starlims_id}}</li>
+        <li>Surname: {{patient.surname}}</li>
+        <li>Forename: {{patient.forename}}</li>
+        <li>DOB: {{patient.dob}}</li>
+    </ul>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <div class="row"></div>
+        <div class="col">Pt 1</div>
+        <div class="col">Pt 2</div>
+        <div class="col">Pt 3</div>
+</div>
+{% endblock content %}
